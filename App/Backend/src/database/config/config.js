@@ -9,12 +9,12 @@ const suffix = {
 };
 
 const options = {
-  host: process.env.DB_HOST || 'localhost',
-  port: process.env.DB_PORT || '5432',
+  host: process.env.POSTGRES_HOST || 'localhost',
+  port: process.env.POSTGRES_PORT || '5432',
   database: 
-    `${process.env.DB_NAME || 'productManagementAppDB'}${suffix[environment] || suffix.test}`,
-  username: process.env.DB_USER || 'root',
-  password: process.env.DB_PASSWORD || 'password',
+    `${process.env.POSTGRES_NAME || 'productManagementAppDB'}${suffix[environment] || suffix.test}`,
+  username: process.env.POSTGRES_USER || 'root',
+  password: process.env.POSTGRES_PASSWORD || 'password',
   dialect: process.env.DB_DIALECT || 'postgres',
   dialectOptions: {
     timezone: 'Z',
