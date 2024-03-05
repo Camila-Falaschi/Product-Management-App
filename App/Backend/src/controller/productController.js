@@ -5,6 +5,19 @@ const getProducts = async (_req, res) => {
   res.status(200).json(products);
 };
 
+const createProduct = async (req, res) => {
+  const product = req.body;
+  const newProduct = await productService.createProduct(product);
+  return res.status(201).json(newProduct);
+};
+
+const updateProduct = async (req, res) => {
+  const { id } = req.params;
+  const product = req.body;
+  const updatedProduct = await productService.updateProduct(id, product);
+  return res.status(201).json(updatedProduct);
+};
+
 const deleteProduct = async (req, res) => {
   const { id } = req.params;
   await productService.deleteProduct(id);
@@ -13,5 +26,7 @@ const deleteProduct = async (req, res) => {
 
 export default {
   getProducts,
+  createProduct,
+  updateProduct,
   deleteProduct,
 };

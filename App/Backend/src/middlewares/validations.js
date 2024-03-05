@@ -25,4 +25,16 @@ const validateRegisterInputs = (req, _res, next) => {
   next();
 };
 
-export default { validateLoginInputs, validateRegisterInputs };
+const validatePriceValue = (price) => {
+  if (typeof price !== 'number') throw new Error('Price must be a number');
+  if (price < 0) throw new Error('Price must be greater than 0');
+};
+
+const validateProductInputs = (req, _res, next) => {
+  const { name, brand, model, price, color } = req.body;
+  if (!name || !brand || !model || !price || !color) throw new Error('Invalid empty fields');
+  validatePriceValue(price);
+  next();
+};
+
+export default { validateLoginInputs, validateRegisterInputs, validateProductInputs };
