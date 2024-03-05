@@ -1,16 +1,12 @@
 import { DataTypes } from 'sequelize';
 import { define } from '../config/database';
 
-const Produto = define('Produto', {
+const User = define('User', {
   id: {
     primaryKey: true,
     autoIncrement: true,
     allowNull: false,
     type: DataTypes.INTEGER,
-  },
-  name: {
-    allowNull: false,
-    type: DataTypes.STRING
   },
   email: {
     allowNull: false,
@@ -23,4 +19,4 @@ const Produto = define('Produto', {
   }
 });
 
-export default Produto;
+export default User;
