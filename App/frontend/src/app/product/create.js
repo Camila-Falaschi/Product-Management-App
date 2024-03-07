@@ -34,7 +34,7 @@ export default function CreateProduct() {
     event.preventDefault();
 
     try {
-      const { data } = await requestPost("/products", {
+      await requestPost("/product", {
         name,
         brand,
         model,
@@ -61,7 +61,7 @@ export default function CreateProduct() {
         </div>
         <section>
           <h1>Create New Product</h1>
-          <form onSubmit={handleSubmit}>
+          <form>
             <label htmlFor="name">
               Name:
               <input
