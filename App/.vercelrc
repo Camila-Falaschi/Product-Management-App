@@ -1,0 +1,14 @@
+* **Arquivo de configuração `.vercelrc`:**
+
+```json
+{
+  "front": "./frontend",
+  "back": "./backend"
+}
+```
+
+* **Opções `--front` e `--back`:**
+
+```
+vercel init --front ./frontend --back ./backend
+```

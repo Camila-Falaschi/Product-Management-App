@@ -11,3 +11,14 @@ O Aplicativo de Gerenciamento de Produtos é uma plataforma web que permite aos 
 <p align="right"><a href="#bem-vindo-ao-product-management-app">(De volta ao topo)</a></p>
 
 <br/>
+
+
+Próximos passos:
+- Tela de login
+- Tela de cadastro
+- Exibir todos os produtos
+- Área para adicionar produto
+- Área para editar produto
+- Barra de pesquisa
+- Filtro
+- Verificar token
