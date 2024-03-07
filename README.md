@@ -4,7 +4,9 @@
 - [Sobre o projeto](#sobre-o-projeto)
 - [Figma Design](#figma-design)
 
+
 <br/>
+
 
 ## Sobre o projeto
 O Aplicativo de Gerenciamento de Produtos é uma plataforma web que permite aos usuários criar, visualizar, editar e excluir produtos de uma lista centralizada armazenada em um banco de dados seguro. Com uma interface amigável, os clientes podem facilmente adicionar novos produtos, atualizar informações existentes e remover itens obsoletos. O aplicativo prioriza a segurança dos dados e é altamente escalável, atendendo às necessidades de empresas de todos os tamanhos. É uma ferramenta essencial para otimizar os processos de gestão de estoque, economizando tempo e recursos.
@@ -21,7 +23,7 @@ Foi criado um modelo de planejamento de projeto no Figma, que você pode acessar
   <summary>
     <strong>Imagem</strong>
   </summary><br>
-  <img src="" alt="figma design">
+  <img src="https://github.com/Camila-Falaschi/Product-Management-App/assets/102390423/cff2bcab-29d2-48b6-9c9c-9d36556c1e74" alt="figma design">
 </details>
 <p align="right"><a href="#bem-vindo-ao-product-management-app">(De volta ao topo)</a></p>
 
