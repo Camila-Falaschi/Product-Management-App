@@ -2,6 +2,7 @@
 
 ## Sumário
 - [Sobre o projeto](#sobre-o-projeto)
+- [Figma Design](#figma-design)
 
 <br/>
 
@@ -10,15 +11,19 @@ O Aplicativo de Gerenciamento de Produtos é uma plataforma web que permite aos 
 
 <p align="right"><a href="#bem-vindo-ao-product-management-app">(De volta ao topo)</a></p>
 
+
 <br/>
 
 
-Próximos passos:
-- Tela de login
-- Tela de cadastro
-- Exibir todos os produtos
-- Área para adicionar produto
-- Área para editar produto
-- Barra de pesquisa
-- Filtro
-- Verificar token
+## Figma Design
+Foi criado um modelo de planejamento de projeto no Figma, que você pode acessar clicando neste <a href="https://www.figma.com/file/xiVnXHhgSz5oWUCiXZjxcC/Untitled?type=design&node-id=0%3A1&mode=design&t=kQilAAyrx3UHzUsz-1">link</a>.
+<details>
+  <summary>
+    <strong>Imagem</strong>
+  </summary><br>
+  <img src="" alt="figma design">
+</details>
+<p align="right"><a href="#bem-vindo-ao-product-management-app">(De volta ao topo)</a></p>
+
+
+<br/>
