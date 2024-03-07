@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { requestPost } from "../services/request";
 
 export default function CreateProduct() {
   const [name, setName] = useState("");

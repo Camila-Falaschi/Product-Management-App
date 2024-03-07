@@ -1,17 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "./components/Header";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
+import queryString from "query-string";
+import { toast } from "react-toastify";
+import { requestDelete, requestPut } from "../services/request";
 
-export default function CreateProduct({ productId, productName, productBrand, productModel, productPrice, productColor }) {
-  const [name, setName] = useState(productName);
-  const [brand, setBrand] = useState(productBrand);
-  const [model, setModel] = useState(productModel);
-  const [price, setPrice] = useState(productPrice);
-  const [color, setColor] = useState(productColor);
-  const [warning, setWarning] = useState(0);
-
+export default function CreateProduct() {
   const router = useRouter();
+  const { query } = router;
+  const objeto = queryString.parse(query);
+
+  const [name, setName] = useState(objeto.name);
+  const [brand, setBrand] = useState(objeto.brand);
+  const [model, setModel] = useState(objeto.model);
+  const [price, setPrice] = useState(objeto.price);
+  const [color, setColor] = useState(objeto.color);
+  const [warning, setWarning] = useState(0);
 
   const handleUpdate = async (event) => {
     event.preventDefault();
@@ -35,12 +40,10 @@ export default function CreateProduct({ productId, productName, productBrand, pr
 
   const handleDelete = async (event) => {
     event.preventDefault();
-    
+
     if (warning === 0) {
       setWarning(1);
-      toast.warning(
-        "Você tem certeza que deseja deletar o produto?"
-      );
+      toast.warning("Você tem certeza que deseja deletar o produto?");
       return;
     } else {
       try {
@@ -48,9 +51,7 @@ export default function CreateProduct({ productId, productName, productBrand, pr
         toast.success("Produto deletado com sucesso!");
         router.push("/");
       } catch (error) {
-        toast.error(
-          "Sinto muito, tente novamente."
-        );
+        toast.error("Sinto muito, tente novamente.");
       }
     }
   };
@@ -119,16 +120,10 @@ export default function CreateProduct({ productId, productName, productBrand, pr
             </label>
           </form>
           <div>
-            <button
-              type="button"
-              onClick={(event) => handleUpdate(event)}
-            >
+            <button type="button" onClick={(event) => handleUpdate(event)}>
               Update
             </button>
-            <button
-              type="button"
-              onClick={(event) => handleDelete(event)}
-            >
+            <button type="button" onClick={(event) => handleDelete(event)}>
               Delete
             </button>
           </div>

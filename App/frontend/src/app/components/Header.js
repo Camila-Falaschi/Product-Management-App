@@ -1,8 +1,10 @@
+'use client'
+
 import React from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { FiLogOut } from "react-icons/fi";
 
-export default Header = () => {
+export default function Header () {
   const router = useRouter();
 
   const handleLogout = () => {
@@ -11,10 +13,12 @@ export default Header = () => {
     router.push('/login');
   };
 
+  const email = sessionStorage.getItem('email') || 'Not logged in';
+
   return (
     <header>
       <div>
-        <p>{sessionStorage.getItem('email') || ''}</p>
+        <p>{email}</p>
       </div>
       <div>
         <button onClick={handleLogout}><FiLogOut /></button>
