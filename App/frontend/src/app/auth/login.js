@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
 import { toast } from "react-toastify";
-import { requestPost } from "../services/request";
+import { requestPost } from "../services/request.js";
 import Link from "next/link";
 
 export default function Login() {
@@ -64,7 +64,7 @@ export default function Login() {
           >
             Login
           </button>
-          <Link href="/register">
+          <Link href="/auth/register">
             <a>Não Possui uma conta? Cadastre-se aqui!</a>
           </Link>
         </form>

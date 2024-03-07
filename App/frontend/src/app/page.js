@@ -41,7 +41,7 @@ export default function Home() {
 
       <div className={styles.grid}>
         <a
-          href="/login"
+          href="/auth/login"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
