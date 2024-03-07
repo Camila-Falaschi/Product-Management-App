@@ -7,6 +7,6 @@ const routers = Router();
 
 routers.use('/login', loginRouter);
 routers.use('/register', registerRouter);
-routers.use('/products', productRouter);
+routers.use('/product', productRouter);
 
 export default routers;
