@@ -24,6 +24,7 @@ export default function Login() {
 
     try {
       const { data } = await requestPost("/login", { email, password });
+      sessionStorage.setItem('email', email);
       sessionStorage.setItem('token', data.token);
       router.push('/');
     } catch (error) {
@@ -34,6 +35,11 @@ export default function Login() {
   return (
     <main>
       <div>
+        <div>
+          <h1>Product</h1>
+          <h1>Management</h1>
+          <h1>APP</h1>
+        </div>
         <form>
           <label htmlFor="email">
             Email
@@ -68,8 +74,8 @@ export default function Login() {
             <a>Não Possui uma conta? Cadastre-se aqui!</a>
           </Link>
         </form>
-        <div />
       </div>
+      <div />
     </main>
   );
 }

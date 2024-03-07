@@ -26,6 +26,7 @@ export default function Login() {
 
     try {
       const { data } = await requestPost( '/register', { email, password });
+      sessionStorage.setItem('email', email);
       sessionStorage.setItem('token', data.token);
       router.push('/');
     } catch (error) {
@@ -36,6 +37,7 @@ export default function Login() {
   return (
     <main>
       <div>
+        <h1>Welcome!</h1>
         <form>
           <label htmlFor="email">
             Email
@@ -81,8 +83,8 @@ export default function Login() {
             <a>Já possui uma conta? Faça login aqui!</a>
           </Link>
         </form>
-        <div />
       </div>
+      <div />
     </main>
   );
 }
